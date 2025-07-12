@@ -1,0 +1,17 @@
+var value = 'tjnprq00';
+var gr = new GlideRecord('u_ftv_generic_choice_table');
+for (var i=10; i<13; i++){
+gr.initialize();
+gr.u_choice_identifier = 'XXTJN49 or XXTJN50 or XXHAI50';
+gr.u_choice_value = value+i;
+gr.u_choice_description = 'JDE Printer name';
+gr.insert();
+}
+
+var gr = new GlideRecord('u_ftv_generic_choice_table');
+gr.addEncodedQuery('u_choice_description=JDE Printer name^u_choice_identifierSTARTSWITHXXTJN49 or XXTJN50 or XXHAI50');
+gr.query();
+while(gr.next()){
+gr.u_choice_identifier = 'ee33be9e1b16ea101c01a7d8b04bcbba , d572bad61b16ea101c01a7d8b04bcbe2';
+gr.update();
+}
