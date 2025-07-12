@@ -1,0 +1,9 @@
+var value = 'tjnprq00';
+var gr = new GlideRecord('u_ftv_generic_choice_table');
+for (var i=10; i<13; i++){
+gr.initialize();
+gr.u_choice_identifier = 'XXTJN49 or XXTJN50 or XXHAI50';
+gr.u_choice_value = value+i;
+gr.u_choice_description = 'JDE Printer name';
+gr.insert();
+}
